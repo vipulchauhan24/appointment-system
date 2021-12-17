@@ -1,0 +1,9 @@
+<div class="card mb-2 ml-2" style="width: 18rem;">
+    <img [src]=data.image class="card-img-top" [alt]=data.name/>
+    <div class="card-body">
+        <h5 class="card-title">{{data['name']}}</h5>
+        <p class="card-text">{{data['speciality']}}</p>
+        <a (click)="loadDoctors()" *ngIf="clinics" class="btn btn-primary">View Doctors</a>
+        <a (click)="loadDoctorDetails()" *ngIf="doctors" class="btn btn-primary">Book an appointement</a>
+    </div>
+</div>

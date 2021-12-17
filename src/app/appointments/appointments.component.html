@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Details</h2>
+            <img style="max-width: 25em;" [src]="details.image" [alt]="details.name">
+            <h3 class="mt-4"><Strong>Name: </Strong>{{details.name}}</h3>
+            <h4><strong>Speciality: </strong>{{details.speciality}}</h4>
+        </div>
+        <div class="col">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>Appointment time:-</h2>
+                        <div (click)="bookAppointment(booking.bookingid, !booking.booked)" *ngFor="let booking of details.available" class="card" style="width: 10em;">
+                            <div class="card-body" [ngClass]="{'available' : !booking.booked}">
+                                {{booking.timing}}
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
